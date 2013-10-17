@@ -67,10 +67,7 @@
     el: '.comment-wall'
   });
 
-  wall.add([
-    { username: 'ROBOT A', side: 'left', comment: 'EXCELLENT' },
-    { username: 'ROBOT B', side: 'right', comment: 'YES' }
-  ]);
+  wall.add(<%= raw @contest.comments.to_json %>);
 
 
   /* *
