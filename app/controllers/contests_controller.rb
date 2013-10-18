@@ -1,5 +1,5 @@
 class ContestsController < ApplicationController
-  before_filter :authenticate_user!, :only [:comment, :destroy_comment]
+  before_filter :authenticate_user!, :only => [:comment, :destroy_comment]
   def index
     @contests = Contest.all
   end
