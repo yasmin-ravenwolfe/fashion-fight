@@ -1,6 +1,12 @@
 (function () {
 
   window.CommentInputView = Backbone.View.extend({
+    // this works because in show the commentForm's el is 'form.newc-omment' which we hide is contests scss.
+    initialize: function(options){
+      if (g.user) {
+        $(this.el).show();
+      }
+    },
     events: {
       'submit': 'createComment'
     },
