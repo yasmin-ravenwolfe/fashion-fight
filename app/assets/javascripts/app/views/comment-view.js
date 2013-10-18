@@ -9,6 +9,8 @@
     render: function () {
       var newCommentHtml = this.template( this.model.toJSON() );
       $(this.el).html(newCommentHtml);
+      var doesUserOwnComment = g.user.id === this.model.get('user_id');
+      $(this.el).find('.delete').toggle(doesUserOwnComment);
       
     },
     deleteComment: function(e){
