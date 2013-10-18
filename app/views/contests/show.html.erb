@@ -60,7 +60,9 @@
   /* *
    * Lesson Step: The Comment Wall View
    */
-  var wall = new CommentWall();
+  var wall = new CommentWall([],{
+    url: '<%= contest_comment_api_path @contest %>'
+  });
 
   var wallView = new CommentWallView({
     collection: wall,
