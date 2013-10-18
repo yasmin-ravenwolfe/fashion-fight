@@ -1,3 +1,4 @@
+
 (function () {
 
   window.VoteCountView = Backbone.View.extend({
